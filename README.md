@@ -86,17 +86,17 @@ The rightmost lever is turned on.
 
 It is fine to use `_` as a separator if your input is long:
 
-`/ru in set bin 1011_1101`
+`/ru in set input1 bin 1011_1101`
 
 It is also fine to use negative numbers:
 
-`/ru in set bin -1001`
+`/ru in set input1 bin -1001`
 
 ![Z5cOKA.png](https://s2.ax1x.com/2019/07/14/Z5cOKA.png)
 
 You can use decimals, so no more calculator conversions:
 
-`/ru in set dec 23333`
+`/ru in set input1 dec 23333`
 
 ![Z5cqvd.png](https://s2.ax1x.com/2019/07/14/Z5cqvd.png)
 
