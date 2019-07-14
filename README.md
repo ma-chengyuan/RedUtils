@@ -187,3 +187,9 @@ You may want to use command block to execute `/ru` based commands for precise ti
 You can't directly do that. Because all the configuration information is bounded to players. Different players can have different input/output configurations and logs of their own output configs will only appear on their on screen. Command Block is obviously not a player!
 
 You can, though, use `/redutilsas {player}` command or `/ruas {player}` to let the command block execute a `/ru` command as some player. For example, `/ruas Steve in set some_input dec 1234` in a command block will have the same effect as Steve executing `/ru in set some_input dec 1234` himself. All the logs and messages will still be sent to the player's screen, not the command block's output.
+
+
+
+## Contributions
+
+Feel free do make PRs. :)
