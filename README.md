@@ -23,13 +23,13 @@ The core command is `/redutils`, or `/ru` for short.
 
 First, use `/ru wand` to acquire the wand, which is basically just a red dye (Getting it from creative tabs is fine too).
 
-![2019-07-14_13.00.37](README.assets\2019-07-14_13.00.37.png)
+![Z5co4O.png](https://s2.ax1x.com/2019/07/14/Z5co4O.png)
 
 ## Inputs
 
 RedUtils helps you easily manage different inputs in your circuit so that you don't have to fly around and toggle infinitely many levers. 
 
-![2019-07-14_13.16.42](README.assets\2019-07-14_13.16.42.png)
+![Z5c5E6.png](https://s2.ax1x.com/2019/07/14/Z5c5E6.png)
 
 In this example, we will use a 32-bit full-adder to demonstrate the usage of the plugin.
 
@@ -49,13 +49,13 @@ Then, we right click the least-significant bit of out input.
 
 If everything is fine, green particles will appear on every input lever in this slice.
 
-![2019-07-14_13.27.11](README.assets\2019-07-14_13.27.11.png)
+![Z5chHx.png](https://s2.ax1x.com/2019/07/14/Z5chHx.png)
 
 (Some farther particles are not visible)
 
 Now you have created an input configuration named "input", to check, type `/ru in list`
 
-![1563082153235](README.assets\1563082153235.png)
+![Z5cfD1.png](https://s2.ax1x.com/2019/07/14/Z5cfD1.png)
 
 Yes, that's it!
 
@@ -65,17 +65,17 @@ Then it's time to input some data into our circuit.
 
 Start simple, type `\ru in set input1 bin 1`
 
-![1563082606319](README.assets\1563082606319.png)
+![Z5cbgH.png](https://s2.ax1x.com/2019/07/14/Z5cbgH.png)
 
 This sets the input of "input1" to 1. 
 
 **Note:** Due to technical reasons, currently an input lever must be directly connected to a redstone. otherwise though you can see the lever flip, the redstone won't be powered unless another block update is given!
 
-![1563082520363](README.assets\1563082520363.png)
+![Z5cH8e.png](https://s2.ax1x.com/2019/07/14/Z5cH8e.png)
 
 (This is OK)
 
-![1563082562170](README.assets\1563082562170.png)
+![Z5cIUK.png](https://s2.ax1x.com/2019/07/14/Z5cIUK.png)
 
 (This is not OK, sadly)
 
@@ -87,13 +87,13 @@ It is also fine to use negative numbers:
 
 `/ru in set bin -1001`
 
-![1563082763752](README.assets\1563082763752.png)
+![Z5cOKA.png](https://s2.ax1x.com/2019/07/14/Z5cOKA.png)
 
 You can use decimals, so no more calculator conversions:
 
 `/ru in set dec 23333`
 
-![1563082835515](README.assets\1563082835515.png)
+![Z5cqvd.png](https://s2.ax1x.com/2019/07/14/Z5cqvd.png)
 
 There are 6 inputs modes, namely:
 
@@ -118,19 +118,19 @@ Or the input configuration will be automatically deleted if the plugin detects t
 
 Apart from the "slice" mode introduced above. There are another 2 modes to create an input config.
 
-First, the `single` mode is used to control a single lever. For example, type `/ru in new ext_carry single`. Then right-click on the lever to create a config named `ext_carry`.
+First,  `single` mode is used to control a single lever. For example, type `/ru in new ext_carry single`. Then right-click on the lever to create a config named `ext_carry`.
 
-![1563083549324](README.assets\1563083549324.png)
+![Z5cxVP.png](https://s2.ax1x.com/2019/07/14/Z5cxVP.png)
 
 All input `set` commands will apply on the single input (though it's pointless to use any advanced mode like `dec`). Besides, you can use `/ru in toggle {name}` to toggle on/off.
 
-![1563083680188](README.assets\1563083680188.png)
+![Z5cXDI.png](https://s2.ax1x.com/2019/07/14/Z5cXDI.png)
 
 (After `/ru in toggle ext_carry`)
 
-The `multi` mode is used to select multiple inputs that aren't perfectly on the same y-level (so `slice` mode no longer works). Right click levers from the most significant bit to the least, then type `/ru doneMultiSel` to finish. (Currently right-clicking the same lever multiple times may lead to unpredicted behavior!)
+`multi` mode is used to select multiple inputs that aren't perfectly on the same y-level (so `slice` mode no longer works). Right click levers from the most significant bit to the least, then type `/ru doneMultiSel` to finish. (Currently right-clicking the same lever multiple times may lead to unpredicted behavior!)
 
-![1563084021755](README.assets\1563084021755.png)
+![Z5cjbt.png](https://s2.ax1x.com/2019/07/14/Z5cjbt.png)
 
 (The case to use `multi` mode).
 
@@ -140,7 +140,7 @@ The `multi` mode is used to select multiple inputs that aren't perfectly on the 
 
 RedUtils helps you manage outputs as well. Similar to creating input configurations, type `/ru out new output1 slice` to create an output configuration named `output1` in `slice` mode. (Select from the most significant bit to the least!) (Any "powerable" block is considered a valid output in the slice, including redstone wires, repeaters..., so make sure not to select extra unwanted blocks!)
 
-![1563084681011](README.assets\1563084681011.png)
+![Z5czUf.png](https://s2.ax1x.com/2019/07/14/Z5czUf.png)
 
 (After the second right-click all valid output blocks will have green particles)
 
@@ -148,7 +148,7 @@ RedUtils helps you manage outputs as well. Similar to creating input configurati
 
 By default, all output configurations **actively log** any change in their state. For example, if I change the input (either manually or by `/ru in set ...`):
 
-![1563084883220](README.assets\1563084883220.png)
+![Z5gS58.png](https://s2.ax1x.com/2019/07/14/Z5gS58.png)
 
 This is when the `[... ticks]` in the beginning of the messages starts is useful. These ticks are measured in **GAME TICKS** (not redstone ticks). And by calculating the difference we are able to tell the exact run time of our circuit. 
 
@@ -158,7 +158,7 @@ If you consider large figures like `[172857 ticks]` annoying, feel free to use `
 
 But a binary output in the log is still a bit confusing. To save time, you can run `/ru out fmt {name} {display mode}` to set the display mode for an output configuration. For example, after running `/ru out fmt output1 dec`, and setting some inputs to our full adder:
 
-![1563085347394](README.assets\1563085347394.png)
+![Z5g9PS.png](https://s2.ax1x.com/2019/07/14/Z5g9PS.png)
 
 The output starts to log decimal instead of raw binary, which is very useful.
 
@@ -170,7 +170,7 @@ Note: the difference between `hex` and `hexPadRight` is that when the output bit
 
 Moreover, you can use `/ru out sep {name} {interval}` to use `_` to separate every `interval` digits. For example, after setting `/ru out sep output1 3`:
 
-![1563085905954](README.assets\1563085905954.png)
+![Z5gC8g.png](https://s2.ax1x.com/2019/07/14/Z5gC8g.png)
 
 If the interval is set to `0`, no separators will be used.
 
