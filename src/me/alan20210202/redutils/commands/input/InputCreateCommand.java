@@ -23,7 +23,7 @@ public class InputCreateCommand extends SimpleCommand {
             return tryCompleteWith(args[0], config.getInputConfigs().keySet());
         if (args.length == 2)
             return tryCompleteWith(args[1], SELECTION_MODE);
-        return null;
+        return emptyList();
     }
 
     @Override

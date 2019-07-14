@@ -47,7 +47,7 @@ public class InputCommand extends SimpleCommand {
             case "1s": return inputOnesCommand.complete(sender, fwd, config);
             }
         }
-        return null;
+        return emptyList();
     }
 
     @Override

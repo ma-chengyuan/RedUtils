@@ -14,8 +14,6 @@ public class SliceUtils {
         return Math.abs(a - b) > EPSILON;
     }
 
-
-
     public static List<Location> getLocationsFromSlice(Location high, Location low, Predicate<Location> filter) throws InvalidSliceException {
         if (high.getWorld() != low.getWorld())
             throw new InvalidSliceException(high, low, "Two endpoints are at two different world");

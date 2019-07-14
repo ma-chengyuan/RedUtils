@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,12 +36,11 @@ public class RedUtilsAsCommand implements TabExecutor {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 0) return null;
         if (args.length == 1)
             return SimpleCommand.tryCompleteWith(args[0], Bukkit.getOnlinePlayers().stream().map(Player::getName).collect(Collectors.toList()));
         else {
             Player player = Bukkit.getPlayer(args[0]);
-            if (player == null) return null;
+            if (player == null) return new ArrayList<>();
             String[] fwd = SimpleCommand.takeFirst(args);
             return redUtilsCommand.complete(player, fwd, redUtilsCommand.plugin.getPlayerConfigManager().get(player));
         }

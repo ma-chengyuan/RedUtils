@@ -18,7 +18,7 @@ public class OutputLogCommand extends SimpleCommand {
     public List<String> complete(Player sender, String[] args, PlayerConfig config) {
         if (args.length == 1)
             return tryCompleteWith(args[0], config.getOutputConfigs().keySet());
-        return null;
+        return emptyList();
     }
 
     @Override

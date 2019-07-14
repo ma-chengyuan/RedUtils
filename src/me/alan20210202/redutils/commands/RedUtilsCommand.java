@@ -45,7 +45,7 @@ public class RedUtilsCommand extends SimpleCommand implements TabExecutor {
             case "resetTimer": resetTimerCommand.complete(sender, fwd, config);
             }
         }
-        return null;
+        return emptyList();
     }
 
     @Override
@@ -82,7 +82,7 @@ public class RedUtilsCommand extends SimpleCommand implements TabExecutor {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player)) return null;
+        if (!(sender instanceof Player)) return emptyList();
         Player player = (Player)sender;
         return complete(player, args, plugin.getPlayerConfigManager().get(player));
     }

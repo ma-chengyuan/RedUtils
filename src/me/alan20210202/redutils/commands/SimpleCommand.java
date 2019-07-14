@@ -26,6 +26,8 @@ public abstract class SimpleCommand {
         return ret;
     }
 
+    protected static List<String> emptyList() { return new ArrayList<>(); }
+
     protected final RedUtils plugin;
 
     public SimpleCommand(RedUtils plugin) {

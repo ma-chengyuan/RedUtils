@@ -36,7 +36,7 @@ public class InputSetCommand extends SimpleCommand {
             return tryCompleteWith(args[0], config.getInputConfigs().keySet());
         if (args.length == 2)
             return tryCompleteWith(args[1], INPUT_MODES.keySet());
-        return null;
+        return emptyList();
     }
 
     @Override

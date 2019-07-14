@@ -17,7 +17,7 @@ public class InputDeleteCommand extends SimpleCommand {
     public List<String> complete(Player sender, String[] args, PlayerConfig config) {
         if (args.length == 1)
             return tryCompleteWith(args[0], config.getInputConfigs().keySet());
-        return null;
+        return emptyList();
     }
 
     @Override

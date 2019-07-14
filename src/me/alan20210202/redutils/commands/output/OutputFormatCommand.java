@@ -20,7 +20,7 @@ public class OutputFormatCommand extends SimpleCommand {
             return tryCompleteWith(args[0], config.getOutputConfigs().keySet());
         if (args.length == 2)
             return tryCompleteWith(args[1], OutputConfig.DISPLAY_FORMATS.keySet());
-        return null;
+        return emptyList();
     }
 
     @Override

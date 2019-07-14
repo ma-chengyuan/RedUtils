@@ -33,12 +33,12 @@ public class PlayerConfig implements ConfigurationSerializable {
     }
 
     public String getInputPreLog(String name) {
-        // Plus 1 because usually it takes 1 extra tick for an input to take effect
-        // (The redstones around will be updated in the next game tick!
-        return ChatColor.RED + "[" + (timer + 1) + " ticks][IN][" + name + "] ";
+        // Plus 1 because it takes 1 extra tick for an input to take effect
+        // The redstones around will be updated in the next game tick!
+        return ChatColor.RED + String.format("[%d ticks][IN][%s] ", timer + 1, name);
     }
 
-    public String getOutputPreLog(String name) { return ChatColor.RED + "[" + timer + " ticks][OUT][" + name + "] "; }
+    public String getOutputPreLog(String name) { return ChatColor.RED + String.format("[%d ticks][OUT][%s] ", timer, name); }
 
     public CommandState getCommandState() {
         return commandState;

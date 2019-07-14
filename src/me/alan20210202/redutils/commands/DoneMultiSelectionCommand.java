@@ -13,7 +13,7 @@ public class DoneMultiSelectionCommand extends SimpleCommand {
 
     @Override
     public List<String> complete(Player sender, String[] args, PlayerConfig config) {
-        return null;
+        return emptyList();
     }
 
     @Override

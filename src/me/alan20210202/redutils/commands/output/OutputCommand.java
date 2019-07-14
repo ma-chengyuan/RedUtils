@@ -46,7 +46,7 @@ public class OutputCommand extends SimpleCommand {
             case "sep": return outputSeparateCommand.complete(sender, fwd, config);
             }
         }
-        return null;
+        return emptyList();
     }
 
     @Override

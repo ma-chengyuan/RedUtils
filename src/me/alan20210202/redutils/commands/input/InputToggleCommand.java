@@ -24,7 +24,7 @@ public class InputToggleCommand extends SimpleCommand {
                     .filter(entry -> entry.getValue().getInputCount() == 1)
                     .map(Map.Entry::getKey)
                     .collect(Collectors.toList()));
-        return null;
+        return emptyList();
     }
 
     @Override
