@@ -6,7 +6,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
-import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -27,7 +26,7 @@ public abstract class SimpleCommand {
         return ret;
     }
 
-    protected RedUtils plugin;
+    protected final RedUtils plugin;
 
     public SimpleCommand(RedUtils plugin) {
         this.plugin = plugin;

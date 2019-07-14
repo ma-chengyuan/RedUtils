@@ -19,6 +19,7 @@ public class SerializationUtils {
         return ret;
     }
 
+    @SuppressWarnings("unchecked")
     public static void deserializeLocsAndStates(ArrayList<Map<String, Object>> data, List<Location> locs, List<Boolean> states) {
         for (Map<String, Object> input : data) {
             locs.add(Location.deserialize((Map<String, Object>)input.get("loc")));

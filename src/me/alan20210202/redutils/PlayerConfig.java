@@ -11,12 +11,12 @@ import java.util.Map;
 
 public class PlayerConfig implements ConfigurationSerializable {
     private CommandState commandState = CommandState.NOTHING;
-    private List<Location> selectedLocations = new ArrayList<>();
+    private final List<Location> selectedLocations = new ArrayList<>();
     private String nameOfSelection = null;
     private long timer = 0;
 
-    private Map<String, InputConfig> inputConfigs = new HashMap<>();
-    private Map<String, OutputConfig> outputConfigs = new HashMap<>();
+    private final Map<String, InputConfig> inputConfigs = new HashMap<>();
+    private final Map<String, OutputConfig> outputConfigs = new HashMap<>();
 
     public PlayerConfig() {}
 

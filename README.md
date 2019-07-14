@@ -42,6 +42,8 @@ In this example, we will use a 32-bit full-adder to demonstrate the usage of the
 
 ### Creating input configuration
 
+In RedUtils, a group of input bits together is called a "input configuration".
+
 We first create a input configuration named `input1` by typing:
 
 ```
@@ -76,15 +78,11 @@ Start simple, type `\ru in set input1 bin 1`
 
 This sets the input of "input1" to 1. 
 
-**Note:** Due to technical reasons, currently an input lever must be directly connected to a redstone. otherwise though you can see the lever flip, the redstone won't be powered unless another block update is given!
+Looking at the full adder again, we see:
 
-![Z5cH8e.png](https://s2.ax1x.com/2019/07/14/Z5cH8e.png)
+![ZIAmTJ.png](https://s2.ax1x.com/2019/07/14/ZIAmTJ.png)
 
-(This is OK)
-
-![Z5cIUK.png](https://s2.ax1x.com/2019/07/14/Z5cIUK.png)
-
-(This is not OK, sadly)
+The rightmost lever is turned on. 
 
 It is fine to use `_` as a separator if your input is long:
 
@@ -191,7 +189,7 @@ Similar to deleting inputs (`/ru out del {name}`), including the automatic remov
 
 You may want to use command block to execute `/ru` based commands for precise timings. For example, set input to 5 for 2 ticks and 7 for 2 ticks and then ... to test if your circuit is robust (This is useful when pistons are involved).
 
-You can't directly do that. Because all the configuration information is bounded to players. Different players can have different input/output configurations and logs of their own output configs will only appear on their on screen. Command Block is obviously not a player!
+You can't directly do that. Because all the configuration information is bounded to players. Different players can have different input/output configurations and logs of their own output configs will only appear on their own screen. Command Block is obviously not a player!
 
 You can, though, use `/redutilsas {player}` command or `/ruas {player}` to let the command block execute a `/ru` command as some player. For example, `/ruas Steve in set some_input dec 1234` in a command block will have the same effect as Steve executing `/ru in set some_input dec 1234` himself. All the logs and messages will still be sent to the player's screen, not the command block's output.
 

@@ -1,10 +1,11 @@
 package me.alan20210202.redutils;
 
-import me.alan20210202.redutils.commands.input.InputCommand;
 import me.alan20210202.redutils.utils.SerializationUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
+import org.bukkit.block.BlockState;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Powerable;
 import org.bukkit.block.data.type.Switch;
@@ -14,7 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class InputConfig implements ConfigurationSerializable {
-    private List<Location> inputs;
+    private final List<Location> inputs;
     private List<Boolean> states;
 
     public int getInputCount() {
@@ -76,12 +77,27 @@ public class InputConfig implements ConfigurationSerializable {
         Block block = loc.getBlock();
         BlockData data = block.getBlockData();
         assert data instanceof Switch;
+        // First power the lever
         Switch s = (Switch) data;
         s.setPowered(powered);
         block.setBlockData(s);
-        block.getState().update(true, true);
-        Block relative = block.getRelative(s.getFacing(), -1);
-        relative.getState().update(true, true);
+        block.getState().update(true);
+
+        // Then update the block
+        final Block relative;
+        switch (s.getFace()) {
+        case WALL: relative = block.getRelative(s.getFacing(), -1); break;
+        case FLOOR: relative = block.getRelative(BlockFace.DOWN); break;
+        default: relative = block.getRelative(BlockFace.UP); break;
+        }
+
+        // Nice fix, works like a charm
+        // Credit: https://www.spigotmc.org/threads/powering-lever-and-updating-state.141261/
+        BlockState initialState = relative.getState();
+        BlockState state = relative.getState();
+        state.setType(Material.AIR);
+        state.update(true, false);
+        initialState.update(true);
     }
 
     // Serialization

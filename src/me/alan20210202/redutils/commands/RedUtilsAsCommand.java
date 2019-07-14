@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RedUtilsAsCommand implements TabExecutor {
-    private RedUtilsCommand redUtilsCommand;
+    private final RedUtilsCommand redUtilsCommand;
 
     public RedUtilsAsCommand(RedUtilsCommand redUtilsCommand) {
         this.redUtilsCommand = redUtilsCommand;

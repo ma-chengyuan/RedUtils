@@ -7,9 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ConvertUtils {
-    private static Map<Character, List<Boolean>> hexMap;
-
-    private static int OUTPUT_CONV_SCALE = 16;
+    private static final Map<Character, List<Boolean>> hexMap;
 
     static {
         hexMap = new HashMap<>();
@@ -173,6 +171,7 @@ public class ConvertUtils {
         Collections.reverse(x);
         for (Boolean b : x) {
             if (b) ret = ret.add(BigDecimal.ONE);
+            int OUTPUT_CONV_SCALE = 16;
             ret = ret.divide(new BigDecimal(2), OUTPUT_CONV_SCALE, RoundingMode.HALF_EVEN);
         }
         return ret;

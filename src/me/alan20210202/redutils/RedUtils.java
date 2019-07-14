@@ -19,6 +19,7 @@ public class RedUtils extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+
         Logger log = getLogger();
         log.info("Greetings from RedUtils!");
 

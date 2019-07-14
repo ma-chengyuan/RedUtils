@@ -9,13 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class OutputCommand extends SimpleCommand {
-    private OutputCreateCommand outputCreateCommand;
-    private OutputDeleteCommand outputDeleteCommand;
-    private OutputListCommand outputListCommand;
-    private OutputSeeCommand outputSeeCommand;
-    private OutputFormatCommand outputFormatCommand;
-    private OutputLogCommand outputLogCommand;
-    private OutputSeparateCommand outputSeparateCommand;
+    private final OutputCreateCommand outputCreateCommand;
+    private final OutputDeleteCommand outputDeleteCommand;
+    private final OutputListCommand outputListCommand;
+    private final OutputSeeCommand outputSeeCommand;
+    private final OutputFormatCommand outputFormatCommand;
+    private final OutputLogCommand outputLogCommand;
+    private final OutputSeparateCommand outputSeparateCommand;
     private static final List<String> SUB_COMMANDS = Arrays.asList("new", "del", "list", "see", "fmt", "log", "sep");
 
 

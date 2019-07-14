@@ -14,11 +14,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RedUtilsCommand extends SimpleCommand implements TabExecutor {
-    private InputCommand inputCommand;
-    private OutputCommand outputCommand;
-    private DoneMultiSelectionCommand doneMultiSelectionCommand;
-    private WandCommand wandCommand;
-    private ResetTimerCommand resetTimerCommand;
+    private final InputCommand inputCommand;
+    private final OutputCommand outputCommand;
+    private final DoneMultiSelectionCommand doneMultiSelectionCommand;
+    private final WandCommand wandCommand;
+    private final ResetTimerCommand resetTimerCommand;
     private static final List<String> SUB_COMMANDS = Arrays.asList("in", "out", "doneMultiSel", "wand", "rst", "resetTimer");
 
     public RedUtilsCommand(RedUtils plugin) {

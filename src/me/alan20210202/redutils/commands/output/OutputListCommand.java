@@ -1,6 +1,5 @@
 package me.alan20210202.redutils.commands.output;
 
-import me.alan20210202.redutils.InputConfig;
 import me.alan20210202.redutils.OutputConfig;
 import me.alan20210202.redutils.PlayerConfig;
 import me.alan20210202.redutils.RedUtils;

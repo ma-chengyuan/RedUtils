@@ -3,17 +3,15 @@ package me.alan20210202.redutils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
 import java.util.*;
 
 public class PlayerConfigManager {
-    private Map<UUID, PlayerConfig> configs;
-    private RedUtils plugin;
+    private final Map<UUID, PlayerConfig> configs;
+    private final RedUtils plugin;
 
     public PlayerConfigManager(RedUtils plugin) {
         configs = new HashMap<>();
@@ -36,6 +34,7 @@ public class PlayerConfigManager {
         }
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public void saveConfigsToFiles() {
         File folder = plugin.getDataFolder();
         if (!folder.exists()) folder.mkdirs();

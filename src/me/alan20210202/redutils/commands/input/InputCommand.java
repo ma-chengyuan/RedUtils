@@ -9,13 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class InputCommand extends SimpleCommand {
-    private InputCreateCommand inputCreateCommand;
-    private InputDeleteCommand inputDeleteCommand;
-    private InputListCommand inputListCommand;
-    private InputToggleCommand inputToggleCommand;
-    private InputSetCommand inputSetCommand;
-    private InputZerosCommand inputZerosCommand;
-    private InputOnesCommand inputOnesCommand;
+    private final InputCreateCommand inputCreateCommand;
+    private final InputDeleteCommand inputDeleteCommand;
+    private final InputListCommand inputListCommand;
+    private final InputToggleCommand inputToggleCommand;
+    private final InputSetCommand inputSetCommand;
+    private final InputZerosCommand inputZerosCommand;
+    private final InputOnesCommand inputOnesCommand;
     private static final List<String> SUB_COMMANDS = Arrays.asList(
             "new", "del", "list", "toggle", "set", "0s", "1s"
     );

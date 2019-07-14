@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class InteractEventListener implements Listener {
-    private RedUtils plugin;
+    private final RedUtils plugin;
 
     InteractEventListener(RedUtils plugin) {
         this.plugin = plugin;
