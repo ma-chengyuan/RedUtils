@@ -1,4 +1,4 @@
-# RedUtils --  a utility plugin that helps minecraft (digital) redstoners debug, profile and refine their designs!
+# RedUtils --  a utility plugin that helps redstoners debug, profile and refine their circuits!
 
 (The plugin is coded in a rush, the code is a total mess. It works though :))
 
@@ -9,7 +9,14 @@ While building a large circuit, are you:
 * using your calculator while inputting numbers and converting the result to decimal?
 * taking screenshots just to capture short pulses causing a glitch in your design?
 
-If so, then the plugin is for you!
+If so, check out this plugin!
+
+Using RedUtils, you can:
+
+- group input(bit)s as a whole and set its value in decimal and hexadecimal in one command (no need to do extra conversions and toggle levers one by one).
+- group output(bit)s as a whole and track its changes over time with optional automatic radix conversion.
+- profile your circuit and measure its run time with ease.
+- all these are done via commands, no need to fly around from one end to another, find a good location and appreciate your running circuit (and perhaps find bugs from observing how it runs)!
 
 ## Compatible Versions
 
