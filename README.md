@@ -2,7 +2,7 @@
 
 (The plugin is coded in a rush, the code is a total mess. It works though :))
 
-After designing a large circuit, are you:
+While building a large circuit, are you:
 
 * struggling to measure its run time using stop watches and great intuition?
 * constantly running between the inputs and outputs, just to pull some levers and check the output?
