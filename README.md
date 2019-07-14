@@ -108,7 +108,7 @@ Additionally, you can use `/ru in 0s input1`, or `/ru in 1s input1` to fill the 
 
 Very useful, isn't it?
 
-### Deleting inputs
+### Deleting input configurations
 
 Deleting input can be done using `/ru in del input1`.
 
@@ -176,7 +176,7 @@ If the interval is set to `0`, no separators will be used.
 
 If you have finished debugging your circuit, you can use `/ru out {name} log` to toggle active logging off so your chat message box is no longer spammed by all the loggings. Nevertheless, you can always use `/ru out see {name}` to manually see the value of the output (display modes apply here too).
 
-### Deleting outputs
+### Deleting output configurations
 
 Similar to deleting inputs (`/ru out del {name}`), including the automatic removal of the whole configuration when any output block in the configuration is broken. To conclude, the plugin isn't WorldEdit-proof.
 
