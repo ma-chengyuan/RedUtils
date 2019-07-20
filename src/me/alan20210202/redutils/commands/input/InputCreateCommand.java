@@ -48,6 +48,9 @@ public class InputCreateCommand extends SimpleCommand {
             sender.sendMessage(ChatColor.RED + "Then run /redutils doneMultiSel to complete");
             config.setCommandState(CommandState.INPUT_SEL_MULTI);
             break;
+        default:
+            sender.sendMessage(ChatColor.RED + "Unknown selection mode: " + args[1]);
+            break;
         }
     }
 }

@@ -1,8 +1,8 @@
 name: RedUtils
-version: 0.0.5
+version: 0.0.6
 author: alan20210202
 main: me.alan20210202.redutils.RedUtils
-api-version: 1.14
+api-version: 1.13
 
 commands:
   redutils:
@@ -10,6 +10,6 @@ commands:
   ru:
     description: Redutils command for short
   redutilsas:
-    description: The central command to use in Command Blocks
+    description: The central command to use RedUtils in Command Blocks
   ruas:
     description: Redutilsas command for short

@@ -21,6 +21,7 @@ Using RedUtils, you can:
 ## Compatible Versions
 
 I am using Paper 1.14.3, other versions of Spigot or Bukkit Server variants should be OK too.
+*Note*: 1.13 should be fine too. Though I have not tested yet.
 
 ## Getting started
 
